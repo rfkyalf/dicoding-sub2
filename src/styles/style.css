@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+a,
+button,
+input,
+textarea {
+  display: inline-block;
+  min-width: 44px;
+  min-height: 44px;
+}
+
 body,
 html {
   margin: 0;
