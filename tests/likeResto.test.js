@@ -4,7 +4,7 @@ import FavoriteRestoIdb from '../src/scripts/data/favorite-resto-idb';
 
 describe('Liking A Resto', () => {
   const addLikeButtonContainer = () => {
-    document.body.innerHTML = '<div id="likeButtonContainer"></div>';
+    document.body.innerHTML = '<div id="likeButton"></div>';
   };
 
   beforeEach(() => {
@@ -38,7 +38,6 @@ describe('Liking A Resto', () => {
 
     document.querySelector('#likeButton').dispatchEvent(new Event('click'));
 
-    // Memastikan film berhasil disukai
     const resto = await FavoriteRestoIdb.getResto('rqdv5juczeskfw1e867');
     expect(resto).toEqual({ id: 'rqdv5juczeskfw1e867' });
 
@@ -50,14 +49,11 @@ describe('Liking A Resto', () => {
       id: 'rqdv5juczeskfw1e867',
     });
 
-    // Tambahkan film dengan ID 'rqdv5juczeskfw1e867' ke daftar film yang disukai
     await FavoriteRestoIdb.putResto({ id: 'rqdv5juczeskfw1e867' });
 
-    // Simulasikan pengguna menekan tombol suka film
     document.querySelector('#likeButton').dispatchEvent(new Event('click'));
 
-    // Tidak ada film yang ganda
-    expect(await FavoriteRestoIdb.getAllRestos()).toEqual([
+    expect(await FavoriteRestoIdb.getAllResto()).toEqual([
       { id: 'rqdv5juczeskfw1e867' },
     ]);
 
@@ -69,6 +65,6 @@ describe('Liking A Resto', () => {
 
     document.querySelector('#likeButton').dispatchEvent(new Event('click'));
 
-    expect(await FavoriteRestoIdb.getAllRestos()).toEqual([]);
+    expect(await FavoriteRestoIdb.getAllResto()).toEqual([]);
   });
 });
