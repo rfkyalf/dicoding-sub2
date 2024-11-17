@@ -4,7 +4,7 @@ import FavoriteRestoIdb from '../src/scripts/data/favorite-resto-idb';
 
 describe('Liking A Resto', () => {
   const addLikeButtonContainer = () => {
-    document.body.innerHTML = '<div id="likeButton"></div>';
+    document.body.innerHTML = '<div id="likeButtonContainer"></div>';
   };
 
   beforeEach(() => {

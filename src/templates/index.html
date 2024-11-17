@@ -36,10 +36,22 @@
     </header>
 
     <div class="hero">
-      <div class="hero_inner">
+      <picture>
+        <source
+          media="(max-width: 600px)"
+          class="lazyload"
+          srcset="./images/heros/hero-image-small.jpg"
+        />
+        <img
+          class="lazyload"
+          src="./images/heros/hero-image-large.jpg"
+          alt="Gambar macam-macam makanan yang diterapkan di komponen hero"
+        />
+      </picture>
+      <!-- <div class="hero_inner">
         <h1 class="hero_title">Restaurant Apps</h1>
         <p class="hero_tagline">Find your favourite restaurants here</p>
-      </div>
+      </div> -->
     </div>
 
     <main id="main-content">
