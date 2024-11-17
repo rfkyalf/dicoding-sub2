@@ -36,16 +36,18 @@
     </header>
 
     <div class="hero">
-      <picture>
+      <picture style="height: 100%; width: 100%">
         <source
           media="(max-width: 600px)"
           class="lazyload"
           srcset="./images/heros/hero-image-small.jpg"
+          style="height: 100%; width: 100%; object-fit: cover"
         />
         <img
           class="lazyload"
           src="./images/heros/hero-image-large.jpg"
-          alt="Gambar macam-macam makanan yang diterapkan di komponen hero"
+          alt="hero"
+          style="height: 100%; width: 100%; object-fit: cover"
         />
       </picture>
       <!-- <div class="hero_inner">

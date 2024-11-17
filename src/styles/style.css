@@ -129,10 +129,9 @@ body {
 .hero {
   display: flex;
   align-items: center;
-  min-height: 500px;
+  height: 500px;
   width: 100%;
   text-align: center;
-  /* background-image: url('../public/images/heros/hero-image_4.jpg'); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
